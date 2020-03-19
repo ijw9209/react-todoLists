@@ -50,20 +50,6 @@ ul li.checked:before {
   height: 15px;
   width: 7px;
 }
-/* 
-.close {
-  position :absolute;
-  right: 0;
-  top : 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.close:hover {
-  background-color: #f44336;
-  padding: 30px 40px;
-  color:white;
-  text-align: center;
-} */
 
 /* header */
 .header {
@@ -108,7 +94,6 @@ input {
 .close {
   position: absolute;
   right: 32px;
-  top: 32px;
   width: 32px;
   height: 32px;
   opacity: 0.3;
@@ -124,9 +109,9 @@ input {
   width: 2px;
   background-color: #333;
 }
-.close:before {
+ .close:before {
   transform: rotate(45deg);
 }
 .close:after {
   transform: rotate(-45deg);
-}
+} 
