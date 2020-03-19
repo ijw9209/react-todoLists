@@ -20,15 +20,14 @@ class App extends Component {
   handleCreate(_title) {
     this.current_todos_max_id = this.current_todos_max_id + 1;
 
-    var _todos = this.state.todos.concat(
-      { id: this.current_todos_max_id, title: _title }
-    )
-
     this.setState({
-      todos: _todos
+      todos: this.state.todos.concat(
+        { id: this.current_todos_max_id, title: _title }
+      )
     })
 
   }
+
   handleDelete(_id) {
     var _todos = this.state.todos;
 
