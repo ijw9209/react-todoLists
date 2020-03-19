@@ -18,29 +18,23 @@ class App extends Component {
   }
 
   handleCreate(_title) {
-    var _todos = Array.from(this.state.todos);
     this.current_todos_max_id = this.current_todos_max_id + 1;
-    _todos.push(
+
+    var _todos = this.state.todos.concat(
       { id: this.current_todos_max_id, title: _title }
     )
+
     this.setState({
       todos: _todos
     })
 
   }
   handleDelete(_id) {
-    var _todos = Array.from(this.state.todos);
-    var i = 0;
-    while (i < _todos.length) {
-      if (_todos[i].id === _id) {
-        _todos.splice(i, 1);
-        break;
-      }
-      i = i + 1;
-    }
+    var _todos = this.state.todos;
+
 
     this.setState({
-      todos: _todos
+      todos: _todos.filter(todo => todo.id !== _id)
     })
     alert('delete!!');
   }

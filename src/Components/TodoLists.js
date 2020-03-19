@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
 class TodoLists extends Component {
+
+    shouldComponentUpdate(newProps) {
+
+        if (this.props.data === newProps.data) {
+            return false;
+        }
+        return true;
+    }
     constructor(props) {
         super(props);
         this.state = { isCheck: 'unchecked' };
